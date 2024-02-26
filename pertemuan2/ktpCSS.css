@@ -1,0 +1,46 @@
+.container-satu {
+    width: 700px;
+    max-height: auto;
+
+    margin: 100px; /* untuk membuat container berada di tengah halaman */
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color: aqua;
+    box-sizing: border-box;
+    
+
+}
+.header{
+    text-align: center;
+    font-style: normal;
+    margin-right: 50px;
+    grid-area: header;
+}
+
+html,body{
+    margin:0;
+    padding:6px;
+}
+body{
+    padding-bottom:100px;
+}
+
+.table {
+    width: 100%; /* Lebar tabel 100% dari lebar kontainer */
+    border-collapse: collapse;
+}
+
+.foto {
+    position: absolute;
+    right: 20%;
+}
+
+.identitas,
+.identitas2,
+.detailAlamat {
+    float: left; /* Pindahkan elemen ke kiri */
+    clear: both; /* Pastikan elemen-elemen tidak tumpang tindih dengan gambar */
+}
+
+

@@ -1,0 +1,20 @@
+.container {
+    width: 700px;
+    max-height: auto;
+
+    margin: 100px; /* untuk membuat container berada di tengah halaman */
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color: aqua;
+    box-sizing: border-box;
+    background-image: url(img/KTP.jpg);
+
+}
+
+.foto {
+    right: 50%;
+    padding-left: 100px;
+    padding-bottom: 60px;
+
+}
