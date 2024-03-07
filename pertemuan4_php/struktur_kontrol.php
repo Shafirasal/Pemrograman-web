@@ -25,5 +25,79 @@ while ($jarakSaatIni < $jarakTarget){
     $hari++;
 }
 
-echo "Atlet tersebut memerlukan $hari hari untuk mencapai untuk mencapai jarak 500 kilometer"
+echo "Atlet tersebut memerlukan $hari hari untuk mencapai untuk mencapai jarak 500 kilometer <br>";
+
+//menggunakan lopoing dengan for
+$jumlahLahan= 10;
+$tanamanPerLahan = 5;
+$jumlahBuah = 0;
+$buahPerTanaman = 10;
+
+for ($i = 1; $i <= $jumlahLahan; $i++){
+    $jumlahBuah += ($tanamanPerLahan * $buahPerTanaman);
+}
+echo "Jumlah buah yang akan dipanen adalah: $jumlahBuah <br>";
+
+/*menggunakan perulangan foreach, Foreach melakukan perulangan dengan mengambil nilai secara berurutan dan di simpan pada variabel $skor. 
+setelah itu dari variabel $skor akan ditambahkan ke $totalSkor. jadi 85+92+78+96+88
+*/
+$skorUjian = [85, 92, 78, 96, 88];
+$totalSkor = 0;
+
+foreach ($skorUjian as $skor){
+    $totalSkor += $skor;
+}
+echo "Total skor ujian adalah: $totalSkor <br>";
+
+//penggunaan foreach dengan array
+$nilaiSiswa = [85, 92, 58, 64, 90, 55, 88, 79, 70, 96];
+foreach($nilaiSiswa as $nilai){
+    if($nilai < 60){
+        echo "Nilai: $nilai (Tidak lulus) <br>";
+        continue;
+    }
+
+    echo "Nilai: $nilai (Lulus) <br>";
+}
+
+
+/*
+Ada soal cerita : Ada seorang guru ingin menghitung total nilai dari 10 siswa dalam ujian matematika.
+Guru ini ingin mengabaikan dua nilai tertinggi dan dua nilai terendah. Bantu guru ini menghitung total nilai yang akan digunakan untuk menentukan nilai rata-rata setelah mengabaikan nilai tertinggi dan terendah. Berikut daftar nilai dari 10 siswa (85, 92, 78, 64, 90,
+75, 88, 79, 70, 96)
+*/
+// $jumlahSiswa = 10;
+// $nilaiMatematika = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
+// $totalNilai = 0;
+// $jumlahNilaiDioperasikan = 0;
+
+// foreach($nilaiMatematika as $nilai){
+//     if ($nilai >= 92 || $nilai <= 70) {
+//         continue; // Skip nilai yang lebih besar dari atau sama dengan 92 dan nilai yang kurang dari atau sama dengan 70
+//     }
+//     $totalNilai += $nilai;
+//     $jumlahNilaiDioperasikan++;
+// }
+
+// if ($jumlahNilaiDioperasikan > 0) {
+//     $rataRataNilai = $totalNilai / $jumlahNilaiDioperasikan;
+//     echo "Rata-rata nilai matematika: $rataRataNilai";
+// } else {
+//     echo "Tidak ada nilai yang dioperasikan.";
+// }
+
+
+$nilaiMatematika = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
+$totalNilai = 0;
+$rataRata=0;
+
+sort($nilaiMatematika);
+echo "<hr>";
+for($i=2; $i<8; $i++){
+ $totalNilai += $nilaiMatematika[$i];
+}
+
+$rataRata = $totalNilai/(count($nilaiMatematika)-4);
+echo "nilai rata rata adalah $rataRata"
+
 ?>
