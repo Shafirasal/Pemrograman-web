@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Praktikum JQuery</title>
+    <link rel="stylesheet" type="text/css" href="styleCSS.css"/>
+    <!-- menghubungkan file jquery yg didownload-->
+    <script type="text/javascript" src="jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".btn1").click(function () {
+                $("h1, h2, p").addClass("blue");
+                $("div").addClass("important");
+            });
+
+            $(".btn2").click(function(){
+                $("h1, h2, p").removeClass("blue");
+            });
+
+            $(".btn3").click(function(){
+                $("h1, h2, p").css({"background-color": "yellow", "font-size": "100%"});
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h1>Heading 2</h1>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <div>This is some important text!</div> <br>
+
+    <button class="btn1">Add classes to elements</button>
+    <button class="btn2">Remove classes to elements</button>
+    <button class="btn3">Set classes to elements</button>
+</body>
+</html>
+
+<!--
+    kode ini menerapkan removeClass dan addClass, yang mana jika addClass maka dia akan menambahkan class yang ada di file css(contohnya "blue")
+    jika removeClass maka akan menghapus class yang ada di file css("contohnya: "important)
+    dan jika ingin set/mengatur css maka bisa menambahkan .css
+-->
+
+<!--
+    Lebih jelasnya:
+        -addClass("className"):digunakan untuk menambahkan satu atau lebih kelas pada elemen yang dipilih.
+         Contoh penggunaan: $("h1, h2, p").addClass("blue") menambahkan kelas "blue" pada elemen <h1>, <h2>, dan <p>, sehingga elemen-elemen tersebut akan menerapkan gaya CSS yang ditentukan oleh kelas "blue".   
+            
+        -removeClass("className"): digunakan untuk menghapus satu atau lebih kelas dari elemen yang dipilih.
+         Contoh penggunaan: $("h1, h2, p").removeClass("blue") menghapus kelas "blue" dari elemen <h1>, <h2>, dan <p>, sehingga gaya CSS yang ditentukan oleh kelas "blue" tidak lagi diterapkan pada elemen-elemen tersebut.
+
+        -css({ property1: value1, property2: value2, ... }): digunakan untuk mengatur properti CSS tertentu pada elemen yang dipilih.
+         Contoh penggunaan: $("h1, h2, p").css({"background-color": "yellow", "font-size": "100%"}) mengatur warna latar belakang menjadi kuning dan ukuran font menjadi 100% pada elemen <h1>, <h2>, dan <p>.
+-->
