@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styleSlide.css" />
+    <!-- menghubungkan file jquery yg didownload-->
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#flip").click(function () {
+          $("#kotak2").slideToggle("slow");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="flip">Klik untuk Efek Slide</div>
+    <div id="kotak2">Selamat Pagi</div>
+  </body>
+</html>
+<!--
+  .slideToggle dalam kode ini, jika elemen dengan flip sebelumnya sudah di tampilkan maka. 
+  hasil dari .slideToggle akan menggunakan efect slideUp. Lalu jika elemen pada flip belum dimunvulkan maka akan dimunculkan dengan slideDown
+
+
+  [Jika elemen tersebut tersembunyi, maka akan ditampilkan dengan efek slideDown. Jika elemen tersebut sudah ditampilkan, maka akan disembunyikan dengan efek slideUp.]
+-->
+<!--
+    Efek slide yang disediakan jQuery digunakan untuk menghilangkan atau menampilkan elemen seolah-olah seperti membuka/menutup sesuatu.
+    Jquery menyediakan sebuah method digunakan untuk memberikan efek animasi pada elemen. effect pada praktkum ini adalah "slide" ada beberapa effect lagi contohnya
+        - .slideDown(): Metode ini digunakan untuk menampilkan elemen dengan efek sliding dari atas ke bawah.
+        - .slideToggle(): Metode ini berguna untuk beralih antara efek slideDown() dan slideUp(). Jika elemen tersembunyi, metode ini akan menampilkannya dengan efek slideDown(), dan jika elemen terlihat, metode ini akan menyembunyikannya dengan efek slideUp().
+        - .slideUp(): Metode ini digunakan untuk menampilkan elemen dengan efek sliding dari bawah ke atas.
+    -->

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Praktikum JQuery</title>
+    <!-- menghubungkan file jquery yg didownload-->
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          alert($("#test1").text());
+        });
+
+        $("#btn2").click(function () {
+          alert($("#test2").html());
+        });
+
+        $("#btn3").click(function () {
+          alert($("#test3").val());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="test1">This is the first paragraph.</p>
+    <p id="test2">This is <b>another</b>paragraph.</p>
+
+    <p>Your Name: <input type="text" id="test3" /></p>
+
+    <button id="btn1">Get Text</button>
+    <button id="btn2">Get HTML</button>
+    <button id="btn3">Get Value</button>
+  </body>
+</html>
+
+<!--
+  kode ini terdapat DOM manipulation atau metode untuk mengubah konten, yaitu
+  .text(): untuk mengambil teks dari elemen HTML
+  .html(): mengembalikan HTML dalam elemen yang dipilih, maka outputnya akan menyertakan kode htmlnya
+  .val(): untuk mengambil atau mengatur nilai dari elemen input, seperti <input>, <select>, atau <textarea>
+-->
+<!--
+  contoh perbedaan dalam tiap method text(), html(), val()
+    -Tombol "Get Text" (#btn1) saat diklik akan menampilkan teks dari paragraf pertama (#test1) dalam sebuah alert.
+     hasilnya: menampilkan isi dari tag <P> id="test1"
+
+    -Tombol "Get HTML" (#btn2) saat diklik akan menampilkan HTML dari paragraf kedua (#test2) dalam sebuah alert. Ini akan menampilkan teks "This is another paragraph." dengan teks "another" ditebalkan karena itu dalam elemen <b>.
+     hasil:This is <b>another</b>paragraph
+     
+    -Tombol "Get Value" (#btn3) saat diklik akan menampilkan nilai dari input teks (#test3) dalam sebuah alert. Ini akan menampilkan apa pun yang dimasukkan pengguna ke dalam kotak input.
+     hasilnya: Shafira jika menginputkan nama "shafira"
+    -->

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Praktikum JQuery</title>
+    <link rel="stylesheet" type="text/css" href="styleAnimate.css" />
+    <!-- menghubungkan file jquery yg didownload-->
+    <script type="text/javascript" src="jquery-3.7.1.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          //memanggil class box dan memberikan gabungan animasi
+          $(".box")
+            .animate({ width: "300px" })
+            .animate({ height: "300px" })
+            .animate({ marginLeft: "150px" })
+            .animate({ borderWidth: "10px" })
+            .animate({ opacity: "0.5" });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button type="button">Start Animation</button>
+    <div class="box"></div>
+  </body>
+</html>
+<!--
+    method .animate() dalam jquery ini digunakan untuk membuat animasi pada elemen HTML dengan mengubah css dari elemen terssebut secara bertahap
+    dalam kasus ini { left: 300 } menunjukkan bahwa selama animasi, elemen <div> akan bergerak ke arah kanan sejauh 300 piksel.
+-->
+
+<!--
+    saat kita mengclick button maka yang terjadi adalah menjalankan yang ada pada  $(".box"), yaitu:
+    - Pertama, lebar (width) elemen "box" diubah menjadi 300 piksel.
+    - Kemudian, tinggi (height) elemen "box" diubah menjadi 300 piksel.
+    - Selanjutnya, jarak kiri (marginLeft) elemen "box" diubah menjadi 150 piksel.
+    - Berikutnya, ketebalan garis tepi (borderWidth) elemen "box" diubah menjadi 10 piksel.
+    - Terakhir, tingkat keburaman (opacity) elemen "box" diubah menjadi 0.5.
+-->

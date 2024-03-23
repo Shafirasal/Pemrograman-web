@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Praktikum JQuery</title>
+    <link rel="stylesheet" type="text/css" href="styleAnimate.css" />
+    <!-- menghubungkan file jquery yg didownload-->
+    <script type="text/javascript" src="jquery-3.7.1.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("div").animate({ left: 300 });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button type="button">Start Animation</button>
+    <div class="box"></div>
+  </body>
+</html>
+<!--
+    method .animate() dalam jquery ini digunakan untuk membuat animasi pada elemen HTML dengan mengubah css dari elemen terssebut secara bertahap
+    dalam kasus ini { left: 300 } menunjukkan bahwa selama animasi, elemen <div> akan bergerak ke arah kanan sejauh 300 piksel.
+-->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Praktikum JQuery</title>
+    <!-- menghubungkan file jquery yg didownload-->
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $("h2").hide();
+          $(".subjudul").hide();
+          $("#paragraf").hide();
+          $("#paragraf .dua").hide();
+          $("div p.paragraf").hide();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>Ini adalah Judul Bab</h2>
+    <h3 class="subjudul">Ini adalah Sub Judul pertama</h3>
+    <p id="paragraf">Ini adalah paragraf pertama</p>
+    <p id="paragraf" class="dua">Ini adalah paragraf kedua</p>
+    <div>
+      <p class="paragraf">Ini adalah paragraf ketiga</p>
+    </div>
+    <p>Ini paragraf yang akan tetap ditampilkan</p>
+    <button>Klik saya!</button>
+  </body>
+</html>
+<!--
+  1. Fungsi hide sendiri yaitu menyembunyikan elemen html dari tampilan pertama ketika tombol di klik
+  2. Kode jQuery digunakan untuk mengatur perilaku halaman web setelah halaman telah dimuat sepenuhnya ($(document).ready(...)). 
+  Ketika tombol diklik ($("button").click(...)), beberapa elemen dalam halaman web akan disembunyikan menggunakan metode .hide() dari jQuery.
+-->
+
+<!--
+  jadi di dalam code tersebut memiliki event listener yaitu .click dalam tag <button> pada <script>, 
+  yang mana ini artinya jika kita mengklik function ("button") .click, maka kode yang ada di dlamnya akan di jalankan
+-->

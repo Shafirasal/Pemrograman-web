@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      #paragraf {
+        width: 600px;
+        height: 80px;
+        background-color: pink;
+        line-height: 80px;
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+    <!-- menghubungkan file jquery yg didownload-->
+    <script src="jquery-3.7.1.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#paragraf").click(function () {
+          $("#paragraf").css("color", "white");
+        });
+
+        $("#paragraf").mouseover(function () {
+          $("#paragraf").css("background-color", "silver");
+        });
+
+        $("#paragraf").mouseout(function () {
+          $("#paragraf").css("background-color", "blue");
+        });
+
+        $("#paragraf").dblclick(function () {
+          $("#paragraf").css("border", "solid 3px black");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="paragraf">Praktikum minggu ke-5 jQuery</p>
+  </body>
+</html>
+
+<!--
+    Jadi css dalam tag <style> itu untuk tetapan tampilan awalnya saja, dan dalam .css function jquery untuk mengubah tampilan awal menjadi model yang di inginkan dengan menggunakan event listener.
+    event listener yang digunakan:
+        - .mouseover:saat kursor mouse berada di atas elemen dengan id "paragraf", warna latar belakangnya akan diubah menjadi perak (background-color: silver).
+        - .mouseout: Saat kursor mouse meninggalkan elemen dengan id "paragraf", warna latar belakangnya akan diubah menjadi biru (background-color: blue). P
+        - .dblclick: Ketika elemen dengan id "paragraf" mendapat double-click, sebuah garis tepi (border) dengan ketebalan 3px dan warna hitam akan ditambahkan pada elemen tersebut (border: solid 3px black).
+
+-->
