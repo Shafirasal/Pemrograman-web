@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="jquery-ui-1.13.2/jquery-ui.css" />
+    <!-- menghubungkan file jquery dan jquery ui yg didownload-->
+    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-ui-1.13.2/jquery-ui.js"></script>
+
+    <script>
+      $(function(){
+        $("#jQuery_accordion") .accordion();
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="jQuery_accordion">
+        <h3>header 1</h3>
+        <p>This is section 1.
+            Place your content here in paragraphs or use div element etc.</p>
+        <h3>header 2</h3>
+        <p>This is section 2. You can also include image like this:
+        <br><img src="img/gambar.jpg"/></p>
+        <h3>header 3</h3>
+        <div>
+            <p>This is section 3. Content can include listing as well</p>
+            <ol>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ol>
+        </div>
+    </div>
+  </body>
+</html>
+
+<!--
+    Accordion berfungsi mengelompokkan konten dalam panel-panel yang terpisah. 
+    Pengunjung web dapat membuka dan menutup panel-panel yang diinginkan
+-->

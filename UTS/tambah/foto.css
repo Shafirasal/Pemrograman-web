@@ -1,0 +1,23 @@
+/* Tata letak gambar */
+.image-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Menambahkan margin atas */
+}
+
+.image-column {
+    margin: 5px;
+}
+
+/* Gaya gambar */
+.image {
+    max-width: 150px;
+}
+.centered{
+    text-align: center;
+}
+
+.logout {
+    text-align: center;
+    display: block; /* Agar tautan menempati lebar penuh */
+}
