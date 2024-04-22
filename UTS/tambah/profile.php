@@ -1,13 +1,21 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['username'])) {
-    header('Location: index.html');
-    exit();
+// Check if the user is already logged in via session
+if (!isset($_SESSION['username'])) { //memeriksa apakah  variabel username sudah diatur atau belum
+    // If not, check if there's a cookie set
+    if(isset($_COOKIE["user"])) { //apakah cookie dengan nama "user" sudah diatur atau tidak. 
+        $_SESSION['username'] = $_COOKIE["user"];
+    } else {
+        // If no session or cookie, redirect to login page
+        header('Location: index.html');
+        exit();
+    }
 }
 
 $username = $_SESSION['username'];
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

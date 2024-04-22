@@ -1,7 +1,7 @@
 <?php
-session_start();
-session_unset();
-session_destroy();
+session_start(); //nyimpen data sesi
+session_unset(); // menghapus semua variabel yang disimpan dalam sesi saat ini.
+session_destroy(); //menghentikan dan menghapus sesi saat ini dari server
 header('Location: index.html');
 exit();
 ?>
